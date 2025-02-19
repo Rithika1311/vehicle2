@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    function selectTab(tab) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(t => {
+        t.classList.remove('active'); // Remove active class from all tabs
+    });
+    document.querySelector(`.${tab}`).classList.add('active'); // Add active class to selected tab
+}
+</script>
+
+<body>
+    <div>
+        <div class="top"></div>
+        <div class="outercontainer">
+            <div class="sidebar"></div>
+            <div class="main">
+                <div class="tabs">
+                    <div class="tab basic active" onclick="selectTab('basic')">Basic</div>
+                    <div class="tab owner" onclick="selectTab('owner')">Owner</div>
+                </div>
+                <div class="container">
+                    <div class="basic form-section">
+                        <div></div>
+                        <div class="profile-container">
+                            <img src="vehicle.jpeg" alt="Profile" class="profile-image">
+                            <div class="add-icon">+</div>
+                        </div>
+                        <div></div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <input type="text" id="vehicleid" class="VehicleID" placeholder="Unique ID">
+                                <label class="vehicleid">Vehicle ID</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <input type="text" id="vehicleno" class="VehicleNo" placeholder="xxxxxxxxxxxxxx">
+                                <label class="vehicleno">Vehicle No</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="type">Type</label>
+                                <select class="typeSelect" id="type">
+                                    <option value="" disabled selected>Select Type</option>
+                                    <option value="Car">Car</option>
+                                    <option value="Bike">Bike</option>
+                                    <option value="Truck">Truck</option>
+                                    <option value="Lorry">Lorry</option>
+                                    <option value="Bus">Bus</option>
+                                    <option value="Van">Van</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="make">Make</label>
+                                <input type="text" id="make" class="Make" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="model">Model</label>
+                                <input type="text" id="model" class="Model" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="year">Year of Manufacture</label>
+                                <input type="date" id="year" class="Year" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="fuelType">Fuel Type</label>
+                                <select class="fuelSelect" id="fuelType">
+                                    <option value="" disabled selected>Select Fuel Type</option>
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Electric">Electric</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="CNG">CNG</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="engineNo">Engine No</label>
+                                <input type="text" id="engineno" class="EngineNo" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="chassisNo">Chassis No</label>
+                                <input type="text" id="chassisno" class="ChassisNo" placeholder="">
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div class="D-buttons1">
+                            <button class="cancel1">Cancel</button>
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="owner form-section hidden">
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <input type="text" id="ownername" class="OwnerName" placeholder="Owner Name">
+                                <label class="oName">Owner Name</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="EmergencyContact">Contact Number</label>
+                                <div class="phone-input">
+                                    <select class="country-code" id="countryCode">
+                                        <option value="+91">🇮🇳 +91</option>
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+61">🇦🇺 +61</option>
+                                        <option value="+81">🇯🇵 +81</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+971">🇦🇪 +971</option>
+                                    </select>
+                                    <input type="number" id="contactNo" class="contact" placeholder="Enter Contact number" maxlength="10">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="ownershipType">Ownership Type</label>
+                                <select class="ownershipSelect" id="ownershipType">
+                                    <option value="" disabled selected>Select Ownership Type</option>
+                                    <option value="Individual">Individual</option>
+                                    <option value="Company">Company</option>
+                                    <option value="Partnership">Partnership</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="registrationDate">Registration Date</label>
+                                <input type="date" id="registrationdate" class="RegistrationDate" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="registrationPlace">Registration Place</label>
+                                <input type="text" id="registrationplace" class="RegistrationPlace" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="rcNumber">RC Number</label>
+                                <input type="text" id="rcnumber" class="RCNumber" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="purchaseDate">Purchase Date</label>
+                                <input type="date" id="purchasedate" class="PurchaseDate" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="price">Price</label>
+                                <input type="text" id="price" class="Price" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="paymentType">Payment Type</label>
+                                <select class="paymentSelect" id="paymentType">
+                                    <option value="" disabled selected>Select Payment Type</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="Loan">Loan</option>
+                                    <option value="Lease">Lease</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="insuranceNumber">Insurance Number</label>
+                                <input type="text" id="insurancenumber" class="InsuranceNumber" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="expiryDate">Expiry Date</label>
+                                <input type="date" id="expirydate" class="ExpiryDate" placeholder="">
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-box"> <!-- Added a box around the input -->
+                                <label class="insuranceCompany">Insurance Company</label>
+                                <input type="text" id="insurancecompany" class="InsuranceCompany" placeholder="">
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div class="D-buttons2">
+                            <button class="cancel2">Cancel</button>
+                            <button class="save">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
