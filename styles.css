@@ -23,16 +23,16 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
-.sidebar {
-    width: 240px; /* Set width to 240px */
-    height: 849px; /* Set height to 849px */
-    background-color: #203C8A; /* Keep the existing background color */
-    position: fixed; /* Keep it fixed */
-    left: 0; /* Keep it on the left */
-    top: 95px; /* Set top position to 95px */
-    overflow-y: auto; /* Allow vertical scrolling if needed */
-}
 
+.sidebar {
+    width: 240px; 
+    height: 849px; 
+    background-color: #203C8A; 
+    position: fixed; 
+    left: 0; 
+    top: 95px; 
+    overflow-y: auto; 
+}
 
 .main {
     width: 80%;
@@ -40,37 +40,38 @@
     display: flex;
     justify-content: space-around;
 }
+
 .tabs {
-    display: flex; /* Aligns tabs in a row */
-    background-color: white; /* White background for the tabs */
-    position: fixed; /* Fixes the tabs at the top */
-    top: 10vh; /* Positioning below the top bar */
-    width: 80%; /* Width of the tabs */
-    z-index: 1000; /* Ensures it stays above other elements */
+    display: flex; 
+    background-color: white; 
+    position: fixed; 
+    top: 10vh; 
+    width: 80%; 
+    z-index: 1000; 
 }
 
 .tab {
-    padding: 10px 20px; /* Padding for better spacing */
-    cursor: pointer; /* Pointer cursor on hover */
-    color: black; /* Text color */
-    border-bottom: 3px solid transparent; /* Default border */
-    transition: border-bottom 0.3s; /* Smooth transition for underline */
+    padding: 10px 20px; 
+    cursor: pointer; 
+    color: black; 
+    border-bottom: 3px solid transparent; 
+    transition: border-bottom 0.3s; 
 }
 
 .tab.active {
-    border-bottom: 3px solid blue; /* Blue underline for active tab */
+    border-bottom: 3px solid blue; 
 }
 
 .container {
-    width: 1171px; /* Set width to 1171px */
-    height: 849px; /* Set height to 849px */
-    background-color: white; /* Set background color to white */
-    position: absolute; /* Use absolute positioning */
-    top: 95px; /* Set top position to 95px */
-    left: 240px; /* Set left position to 252px */
-    display: flex; /* Maintain flex display */
-    flex-direction: column; /* Maintain column direction */
-    overflow-y: auto; /* Allow vertical scrolling if needed */
+    width: 1171px; 
+    height: 849px; 
+    background-color: white; 
+    position: absolute; 
+    top: 95px; 
+    left: 240px; 
+    display: flex; 
+    flex-direction: column; 
+    overflow-y: auto; 
 }
 
 .form-section {
@@ -129,21 +130,21 @@
 }
 
 .input-container .input-box {
-    width: 350px; /* Set width to 350px */
-    height: 50px; /* Set height to 50px */
-    border: 1px solid #000000; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding inside the box */
-    background-color: rgba(255, 255, 255, 0.3); /* Background color with 30% opacity */
-    position: relative; /* Position relative for label positioning */
+    width: 350px; 
+    height: 50px; 
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    position: relative; 
 }
 
 .input-container input {
-    width: 100%; /* Fill the box */
-    height: 100%; /* Fill the box */
+    width: 100%; 
+    height: 100%; 
     font-size: 16px;
-    border: none; /* Remove border from input */
-    background: transparent; /* Make background transparent */
+    border: none; 
+    background: transparent; 
     color: black;
     border-radius: 5px;
     padding: 10px;
